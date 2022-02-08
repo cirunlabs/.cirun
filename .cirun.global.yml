@@ -1,1 +1,1 @@
-run_only_when_trigger_by: new-team
+run_only_when_triggered_by: new-team
