@@ -1,0 +1,12 @@
+version: 1
+
+policies:
+  - id: conda-forge-per-team
+    repo: aktechlabs/conda-forge-test
+    teams:
+      - core
+
+access_control:
+  - resource: X
+    policies:
+      - conda-forge-per-team
