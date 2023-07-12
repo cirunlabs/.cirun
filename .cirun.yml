@@ -7,7 +7,6 @@ runners:
     labels:
       - cirun-openstack-gpu
       - openstack-gpu-runner
-
   - name: cirun-openstack-cpu-runner
     cloud: openstack
     instance_type: ci_medium
