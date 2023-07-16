@@ -1,12 +1,12 @@
 version: 1
 
 policies:
-  - id: conda-forge-per-team
-    repo: aktechlabs/conda-forge-test
+  - id: cirun-sandbox-policy
+    repo: aktechlabs/cirun-sandbox
     teams:
       - core
 
 access_control:
-  - resource: X
+  - resource: cirun-runner
     policies:
-      - conda-forge-per-team
+      - aktechlabs/cirun-sandbox
