@@ -5,8 +5,10 @@ policies:
     repo: aktechlabs/cirun-sandbox
     teams:
       - core
+      - alpha
+      - beta
 
 access_control:
-  - resource: cirun-runner
+  - resource: aws-cpu-runner
     policies:
-      - aktechlabs/cirun-sandbox
+      - cirun-sandbox-policy
