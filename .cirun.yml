@@ -7,6 +7,7 @@ runners:
     labels:
       - cirun-openstack-gpu
       - openstack-gpu-runner
+
   - name: cirun-openstack-cpu-runner
     cloud: openstack
     instance_type: ci_medium
@@ -15,3 +16,11 @@ runners:
     labels:
       - cirun-cpu-runner
       - openstack-cpu-runner
+
+  - name: aws-cpu-runner
+    cloud: aws
+    instance_type: t2.medium
+    machine_image: ami-06fd8a495a537da8b
+    preemptible: true
+    labels:
+      - cirun-runner
