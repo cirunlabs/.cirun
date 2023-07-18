@@ -24,3 +24,125 @@ runners:
     preemptible: true
     labels:
       - cirun-runner
+
+  - name: aws-gpu-runner
+    cloud: aws
+    instance_type: g4dn.xlarge
+    machine_image: ami-00ac0c28c01352e53
+    labels:
+      - aws-gpu
+
+  - name: aws-cpu-runner-fail
+    cloud: aws
+    instance_type: t2.nano
+    machine_image: ami-06fd8a495a537da8bX
+    labels:
+      - aws-cpu
+
+  - name: aws-cpu-runner-pass
+    cloud: aws
+    instance_type: t2.nano
+    machine_image: ami-06fd8a495a537da8b
+    labels:
+      - aws-cpu
+
+  - name: aws-cpu-runner-fail-2
+    cloud: aws
+    instance_type: t2.nano
+    machine_image: ami-06fd8a495a537da8bX
+    labels:
+      - aws-cpu
+
+  - name: aws-cpu-arm-runner
+    cloud: aws
+    instance_type: a1.medium
+    machine_image: ami-0229f8cfc24033d05
+    labels:
+      - aws-cpu-arm
+
+  - name: aws-cpu-different-region
+    cloud: aws
+    instance_type: t2.nano
+    machine_image: ami-05f7491af5eef733a
+    region: eu-central-1
+    labels:
+      - aws-cpu-frankfurt
+
+  - name: aws-labels-runner
+    cloud: aws
+    instance_type: t2.nano
+    machine_image: ami-06fd8a495a537da8b
+    workflow: .github/workflows/aws-workflow-runner.yml
+    labels:
+      - aws-workflow-runner
+
+  - name: aws-multiple-runner
+    cloud: aws
+    instance_type: t2.nano
+    machine_image:
+      - ami-06fd8a495a537da8b
+      - ami-06fd8a495a537da8b
+      - ami-06fd8a495a537da8b
+      - ami-06fd8a495a537da8b
+      - ami-06fd8a495a537da8b
+    region:
+      - sa-east-1
+      - me-south-1
+      - eu-north-1
+      - eu-west-1
+      - eu-north-1
+    labels:
+      - aws-multiple-runner
+
+  - name: gcp-gpu-custom-machine-runner
+    cloud: gcp
+    gpu: nvidia-tesla-t4
+    instance_type: n1-standard-1
+    machine_image: cirun-labs:cirun-nvidia
+    labels:
+      - gcp-gpu-custom-machine
+
+  - name: gcp-cpu-runner
+    cloud: gcp
+    instance_type: n1-standard-1
+    machine_image: ubuntu-2004-focal-v20220712
+    labels:
+      - gcp-cpu
+
+  - name: do-runner
+    cloud: digitalocean
+    instance_type: s-1vcpu-1gb
+    machine_image: ubuntu-20-04-x64
+    labels:
+      - do
+
+  - name: azure-cpu-runner
+    cloud: azure
+    instance_type: Standard_DS1_v2
+    machine_image: Canonical:UbuntuServer:18.04-LTS:latest
+    labels:
+      - azure-cpu
+
+  - name: azure-gpu-runner
+    cloud: azure
+    instance_type: Standard_NC4as_T4_v3
+    machine_image: nvidia:ngc_azure_17_11:ngc-base-version-22_03_0-gen2:latest
+    region: southeastasia
+    labels:
+      - azure-gpu
+  
+  - name: azure-cpu-runner-spotinstance
+    cloud: azure
+    instance_type: Standard_DS1_v2
+    machine_image: Canonical:UbuntuServer:18.04-LTS:latest
+    preemptible: true
+    labels:
+      - azure-cpu-spot
+
+  - name: oracle-runner
+    cloud: oracle
+    instance_type: VM.Standard.E2.1.Micro
+    machine_image: ocid1.image.oc1.uk-london-1.aaaaaaaavy5v3inu2ho2h57vwvvsclukdh4jvhg45um2nrejyxa7s46zcwoq
+    region: uk-london-1
+    labels:
+      - oracle-cpu
