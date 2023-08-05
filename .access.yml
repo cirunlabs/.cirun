@@ -68,3 +68,9 @@ access_control:
     policies: []
   - resource: aws-runner-2
     policies: []
+  - resource: aws-runner-1
+    policies:
+      - aktech/sandbox-policy
+  - resource: aws-runner-2
+    policies:
+      - aktech/sandbox-policy
