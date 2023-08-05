@@ -1,49 +1,4 @@
-access_control:
-  - policies:
-      - cirun-demo-repo-policy
-    resource: aws-gpu-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: aws-cpu-runner-fail
-  - policies:
-      - cirun-demo-repo-policy
-    resource: aws-cpu-runner-pass
-  - policies:
-      - cirun-demo-repo-policy
-    resource: aws-cpu-runner-fail-2
-  - policies:
-      - cirun-demo-repo-policy
-    resource: aws-cpu-arm-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: aws-cpu-different-region
-  - policies:
-      - cirun-demo-repo-policy
-    resource: aws-labels-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: aws-multiple-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: gcp-gpu-custom-machine-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: gcp-cpu-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: do-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: azure-cpu-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: azure-gpu-runner
-  - policies:
-      - cirun-demo-repo-policy
-    resource: azure-cpu-runner-spotinstance
-  - policies:
-      - cirun-demo-repo-policy
-    resource: oracle-runner
+version: 1
 policies:
   - id: cirun-sandbox-policy
     repo: aktechlabs/cirun-sandbox
@@ -57,4 +12,49 @@ policies:
       - core
       - alpha
       - beta
-version: 1
+access_control:
+  - resource: aws-gpu-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: aws-cpu-runner-fail
+    policies:
+      - cirun-demo-repo-policy
+  - resource: aws-cpu-runner-pass
+    policies:
+      - cirun-demo-repo-policy
+  - resource: aws-cpu-runner-fail-2
+    policies:
+      - cirun-demo-repo-policy
+  - resource: aws-cpu-arm-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: aws-cpu-different-region
+    policies:
+      - cirun-demo-repo-policy
+  - resource: aws-labels-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: aws-multiple-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: gcp-gpu-custom-machine-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: gcp-cpu-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: do-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: azure-cpu-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: azure-gpu-runner
+    policies:
+      - cirun-demo-repo-policy
+  - resource: azure-cpu-runner-spotinstance
+    policies:
+      - cirun-demo-repo-policy
+  - resource: oracle-runner
+    policies:
+      - cirun-demo-repo-policy
