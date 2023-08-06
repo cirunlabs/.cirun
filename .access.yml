@@ -65,8 +65,6 @@ access_control:
     policies:
       - cirun-demo-repo-policy
   - resource: aws-runner-1
-    policies:
-      - aktech/sandbox-policy
+    policies: []
   - resource: aws-runner-2
-    policies:
-      - aktech/sandbox-policy
+    policies: []
