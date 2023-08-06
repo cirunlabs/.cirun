@@ -1,5 +1,4 @@
 version: 1
-
 policies:
   - id: cirun-sandbox-policy
     repo: aktechlabs/cirun-sandbox
@@ -13,7 +12,12 @@ policies:
       - core
       - alpha
       - beta
-
+  - id: aktech/sandbox-policy
+    repo: aktech/sandbox
+    teams:
+      - core
+      - alpha
+      - beta
 access_control:
   - resource: aws-gpu-runner
     policies:
@@ -60,3 +64,9 @@ access_control:
   - resource: oracle-runner
     policies:
       - cirun-demo-repo-policy
+  - resource: aws-runner-1
+    policies:
+      - aktech/sandbox-policy
+  - resource: aws-runner-2
+    policies:
+      - aktech/sandbox-policy
