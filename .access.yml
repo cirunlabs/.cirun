@@ -22,6 +22,12 @@ policies:
     repo: cirun-demo
     teams:
       - alpha
+  - id: aktech/sandbox-policy
+    repo: aktech/sandbox
+    teams:
+      - core
+      - alpha
+      - beta
 access_control:
   - resource: aws-gpu-runner
     policies:
