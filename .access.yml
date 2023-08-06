@@ -12,12 +12,6 @@ policies:
       - core
       - alpha
       - beta
-  - id: aktech/sandbox-policy
-    repo: sandbox
-    teams:
-      - core
-      - alpha
-      - beta
   - id: cirun-demo-policy
     repo: cirun-demo
     teams:
