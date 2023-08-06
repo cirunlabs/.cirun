@@ -1,19 +1,19 @@
 version: 1
 policies:
   - id: cirun-sandbox-policy
-    repo: aktechlabs/cirun-sandbox
+    repo: cirun-sandbox
     teams:
       - core
       - alpha
       - beta
   - id: cirun-demo-repo-policy
-    repo: aktechlabs/cirun-demo
+    repo: cirun-demo
     teams:
       - core
       - alpha
       - beta
   - id: aktech/sandbox-policy
-    repo: aktech/sandbox
+    repo: sandbox
     teams:
       - core
       - alpha
@@ -74,27 +74,3 @@ access_control:
   - resource: aws-runner-2
     policies:
       - aktech/sandbox-policy
-  - resource: a
-    policies:
-      - cirun-demo-policy
-  - resource: w
-    policies:
-      - cirun-demo-policy
-  - resource: s
-    policies:
-      - cirun-demo-policy
-  - resource: '-'
-    policies:
-      - cirun-demo-policy
-  - resource: r
-    policies:
-      - cirun-demo-policy
-  - resource: u
-    policies:
-      - cirun-demo-policy
-  - resource: n
-    policies:
-      - cirun-demo-policy
-  - resource: e
-    policies:
-      - cirun-demo-policy
