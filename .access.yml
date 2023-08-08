@@ -73,8 +73,6 @@ access_control:
   - resource: aws-runner-2
     policies: []
   - resource: amit-resource
-    policies:
-      - aktech/sandbox-policy
+    policies: []
   - resource: jaime-resource
-    policies:
-      - aktech/sandbox-policy
+    policies: []
