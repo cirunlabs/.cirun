@@ -6,26 +6,22 @@ policies:
       - core
       - alpha
       - beta
-    pull_request: true
   - id: cirun-demo-repo-policy
     repo: cirun-demo
     teams:
       - core
       - alpha
       - beta
-    pull_request: true
   - id: cirun-demo-policy
     repo: cirun-demo
     teams:
       - alpha
-    pull_request: true
   - id: aktech/sandbox-policy
     repo: aktech/sandbox
     teams:
       - core
       - alpha
       - beta
-    pull_request: true
   - id: cirun-feedstock-policy
     repo: cirun-feedstock
     teams:
