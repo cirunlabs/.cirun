@@ -6,22 +6,31 @@ policies:
       - core
       - alpha
       - beta
+    pull_request: true
   - id: cirun-demo-repo-policy
     repo: cirun-demo
     teams:
       - core
       - alpha
       - beta
+    pull_request: true
   - id: cirun-demo-policy
     repo: cirun-demo
     teams:
       - alpha
+    pull_request: true
   - id: aktech/sandbox-policy
     repo: aktech/sandbox
     teams:
       - core
       - alpha
       - beta
+    pull_request: true
+  - id: cirun-feedstock-policy
+    repo: cirun-feedstock
+    teams:
+      - cirun-feedstock
+    pull_request: null
 access_control:
   - resource: aws-gpu-runner
     policies:
@@ -76,3 +85,30 @@ access_control:
     policies: []
   - resource: jaime-resource
     policies: []
+  - resource: c
+    policies:
+      - cirun-feedstock-policy
+  - resource: i
+    policies:
+      - cirun-feedstock-policy
+  - resource: r
+    policies:
+      - cirun-feedstock-policy
+  - resource: u
+    policies:
+      - cirun-feedstock-policy
+  - resource: n
+    policies:
+      - cirun-feedstock-policy
+  - resource: '-'
+    policies:
+      - cirun-feedstock-policy
+  - resource: g
+    policies:
+      - cirun-feedstock-policy
+  - resource: p
+    policies:
+      - cirun-feedstock-policy
+  - resource: e
+    policies:
+      - cirun-feedstock-policy
