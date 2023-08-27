@@ -78,5 +78,4 @@ access_control:
     policies:
       - cirun-demo-repo-policy
   - resource: cirun-gpu-runner
-    policies:
-      - cirun-feedstock-policy
+    policies: []
