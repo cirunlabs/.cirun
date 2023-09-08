@@ -31,6 +31,11 @@ policies:
     teams:
       - cirun-feedstock
     pull_request: false
+  - id: nebari-feedstock-policy
+    repo: nebari-feedstock
+    teams:
+      - nebari-feedstock
+    pull_request: false
 access_control:
   - resource: aws-gpu-runner
     policies:
@@ -80,3 +85,4 @@ access_control:
   - resource: cirun-gpu-runner
     policies:
       - cirun-feedstock-policy
+      - nebari-feedstock-policy
