@@ -86,3 +86,6 @@ access_control:
     policies:
       - cirun-feedstock-policy
       - nebari-feedstock-policy
+  - resource: cirun-gpu-runner-pr
+    policies:
+      - nebari-feedstock-policy
