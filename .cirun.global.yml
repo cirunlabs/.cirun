@@ -22,3 +22,18 @@ runners:
     region: RegionOne
     labels:
       - cirun-openstack-cpu-medium
+
+
+setup_info:
+  - group: Alpha
+    detail: This is some information that will be shown in the first step of the github actions job.
+
+  - group: Beta
+    detail: >
+      Some text for beta
+      this is multiline text
+      that will also be shown in the
+      first step of the github actions job called Setup Info
+
+  - group: Gamma
+    detail: Some text for gamma with link: https://cirun.io
