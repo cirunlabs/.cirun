@@ -23,6 +23,12 @@ runners:
     labels:
       - cirun-openstack-cpu-medium
 
+  - name: aws-cpu-runner
+    cloud: aws
+    instance_type: t2.small
+    machine_image: ami-06fd8a495a537da8b
+    labels:
+      - cirun-aws-cpu-runner
 
 setup_info:
   - group: Alpha
