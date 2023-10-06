@@ -26,7 +26,7 @@ runners:
 
 setup_info:
   - group: Alpha
-    detail: This is some information that will be shown in the first step of the github actions job.
+    detail: "This is some information that will be shown in the first step of the github actions job."
 
   - group: Beta
     detail: >
@@ -36,4 +36,4 @@ setup_info:
       first step of the github actions job called Setup Info
 
   - group: Gamma
-    detail: Some text for gamma with link: https://cirun.io
+    detail: "Some text for gamma with link: https://cirun.io"
