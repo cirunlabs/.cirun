@@ -1,12 +1,19 @@
 version: 1
-
 policies:
   - id: cf-autotick-bot-test-package-policy
     repo: cf-autotick-bot-test-package-feedstock
     teams:
       - core
-
+    pull_request: false
+  - id: cirun-feedstock-policy
+    repo: cirun-feedstock
+    teams:
+      - core
+    pull_request: false
 access_control:
   - resource: cirun-openstack-gpu-large
     policies:
       - cf-autotick-bot-test-package-policy
+  - resource: cirun-openstack-cpu-medium
+    policies:
+      - cirun-feedstock-policy
