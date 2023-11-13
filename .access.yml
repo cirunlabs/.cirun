@@ -10,10 +10,17 @@ policies:
     teams:
       - core
     pull_request: false
+  - id: sandbox-public-policy
+    repo: sandbox-public
+    teams:
+      - core
+    pull_request: false
 access_control:
   - resource: cirun-openstack-gpu-large
     policies:
       - cf-autotick-bot-test-package-policy
+      - sandbox-public-policy
   - resource: cirun-openstack-cpu-medium
     policies:
       - cirun-feedstock-policy
+      - sandbox-public-policy
