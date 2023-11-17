@@ -7,8 +7,8 @@ policies:
     pull_request: false
   - id: cirun-feedstock-policy
     repo: cirun-feedstock
-    teams:
-      - core
+    roles:
+      - admin
     pull_request: false
   - id: sandbox-public-policy
     repo: sandbox-public
