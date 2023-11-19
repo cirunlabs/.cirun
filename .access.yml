@@ -34,7 +34,14 @@ access_control:
     policies:
       - cf-autotick-bot-test-package-policy
       - sandbox-public-policy
+      - conda-forge-users-example-policy
+      - conda-forge-users-from-json-policy
+      - conda-forge-role-example-policy
+
   - resource: cirun-openstack-cpu-medium
     policies:
       - cirun-feedstock-policy
       - sandbox-public-policy
+      - conda-forge-users-example-policy
+      - conda-forge-users-from-json-policy
+      - conda-forge-role-example-policy
