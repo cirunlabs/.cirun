@@ -15,6 +15,20 @@ policies:
     teams:
       - core
     pull_request: false
+  - id: conda-forge-users-example-policy
+    repo: conda-forge-users-example
+    users:
+      - aktech
+    pull_request: false
+  - id: conda-forge-role-example-policy
+    repo: conda-forge-role-example
+    roles:
+      - admin
+    pull_request: false
+  - id: conda-forge-users-from-json-policy
+    repo: conda-forge-users-from-json
+    users_from_json: https://raw.githubusercontent.com/Quansight/open-gpu-server/main/access/conda-forge-users.json
+    pull_request: false
 access_control:
   - resource: cirun-openstack-gpu-large
     policies:
