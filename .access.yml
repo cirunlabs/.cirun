@@ -4,31 +4,65 @@ policies:
     repo: cf-autotick-bot-test-package-feedstock
     teams:
       - core
+    roles: null
+    users: null
     pull_request: false
+    users_from_json: null
   - id: cirun-feedstock-policy
     repo: cirun-feedstock
+    teams: null
     roles:
       - admin
+    users: null
     pull_request: false
+    users_from_json: null
   - id: sandbox-public-policy
     repo: sandbox-public
     teams:
       - core
+    roles: null
+    users: null
     pull_request: false
+    users_from_json: null
   - id: conda-forge-users-example-policy
     repo: conda-forge-users-example
+    teams: null
+    roles: null
     users:
       - aktech
     pull_request: false
+    users_from_json: null
   - id: conda-forge-role-example-policy
     repo: conda-forge-role-example
+    teams: null
     roles:
       - admin
+    users: null
     pull_request: false
+    users_from_json: null
   - id: conda-forge-users-from-json-policy
     repo: conda-forge-users-from-json
-    users_from_json: https://raw.githubusercontent.com/Quansight/open-gpu-server/main/access/conda-forge-users.json
+    teams: null
+    roles: null
+    users: null
     pull_request: false
+    users_from_json: https://raw.githubusercontent.com/Quansight/open-gpu-server/main/access/conda-forge-users.json
+  - id: cirun-py-test-policy
+    repo: cirun-py-test
+    teams:
+      - team1
+      - team2
+      - team3
+    roles:
+      - role1
+      - role2
+      - role3
+    users:
+      - user1
+      - user2
+      - user3
+    pull_request: false
+    users_from_json: https://cirun.io/users.json
 access_control:
   - resource: cirun-openstack-gpu-large
     policies:
@@ -37,7 +71,6 @@ access_control:
       - conda-forge-users-example-policy
       - conda-forge-users-from-json-policy
       - conda-forge-role-example-policy
-
   - resource: cirun-openstack-cpu-medium
     policies:
       - cirun-feedstock-policy
@@ -45,3 +78,6 @@ access_control:
       - conda-forge-users-example-policy
       - conda-forge-users-from-json-policy
       - conda-forge-role-example-policy
+  - resource: cirun-py-resource
+    policies:
+      - cirun-py-test-policy
