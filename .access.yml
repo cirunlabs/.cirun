@@ -72,6 +72,22 @@ policies:
       - write
     pull_request: true
     users_from_json: https://raw.githubusercontent.com/Quansight/open-gpu-server/main/access/conda-forge-users.json
+  - id: cirun-py-policy
+    repo: cirun-py
+    teams:
+      - team1
+      - team2
+      - team3
+    roles:
+      - role1
+      - role2
+      - role3
+    users:
+      - user1
+      - user2
+      - user3
+    pull_request: false
+    users_from_json: https://cirun.io/users.json
 access_control:
   - resource: cirun-openstack-gpu-large
     policies:
@@ -110,3 +126,6 @@ access_control:
   - resource: cirun-openstack-cpu-xlarge
     policies:
       - cf-autotick-bot-test-package-policy
+  - resource: cirun-runner-1
+    policies:
+      - cirun-py-policy
