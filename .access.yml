@@ -73,7 +73,7 @@ policies:
     pull_request: true
     users_from_json: https://raw.githubusercontent.com/Quansight/open-gpu-server/main/access/conda-forge-users.json
   - id: cirun-macos-runner-policy
-    repo: cirun-on-prem-macos-runner-example
+    repo: macos-on-prem-runner-example
     roles:
       - admin
       - maintain
