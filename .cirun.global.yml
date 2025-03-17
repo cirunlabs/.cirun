@@ -52,3 +52,11 @@ runners:
       - linux
       - x64
       - cirun-openstack-cpu-large
+
+  - name: cirun-macos-runner
+    cloud: on_prem
+    instance_type: 4vcpu-4gb-40gb
+    machine_image: "macos-sequoia-vanilla:latest"
+    region: RegionOne
+    labels:
+      - cirun-macos-runner
